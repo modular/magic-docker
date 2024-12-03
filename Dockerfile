@@ -1,4 +1,4 @@
-ARG MAGIC_VERSION=0.4.0
+ARG MAGIC_VERSION=0.5.0
 ARG BASE_IMAGE=debian:bookworm-slim
 
 FROM --platform=$TARGETPLATFORM ubuntu:24.04 AS builder
