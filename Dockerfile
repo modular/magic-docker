@@ -1,4 +1,4 @@
-ARG MAGIC_VERSION=0.5.0
+ARG MAGIC_VERSION=0.5.1
 ARG BASE_IMAGE=debian:bookworm-slim
 
 FROM --platform=$TARGETPLATFORM ubuntu:24.04 AS builder
@@ -13,3 +13,4 @@ RUN /magic --version
 
 FROM --platform=$TARGETPLATFORM $BASE_IMAGE
 COPY --from=builder --chown=root:root --chmod=0555 /magic /usr/local/bin/magic
+ENV PATH="/root/.modular/bin:/root/.magic/bin:${PATH}"
