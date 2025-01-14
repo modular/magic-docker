@@ -15,10 +15,10 @@ docker pull ghcr.io/modular/magic:latest
 
 There are different tags for different base images available:
 
-- `latest` - based on `ubuntu:jammy`
+- `latest` - based on `ubuntu:noble`
 - `focal` - based on `ubuntu:focal`
 - `bullseye` - based on `debian:bullseye`
-- `jammy-cuda-12.2.2` - based on `nvidia/cuda:12.2.2-jammy`
+- `noble-cuda-12.6.3` - based on `nvidia/cuda:12.6.3-ubuntu24.04`
 - ... and more
 
 ## Usage with shell-hook
@@ -65,17 +65,17 @@ There are images based on `ubuntu`, `debian` and `nvidia/cuda` available.
 
 ### Ubuntu
 
-The `ubuntu:jammy` (22.04) based image is the default base image. It is used for the `latest` and `0.x.y` tag.
+The [`ubuntu:noble`](https://hub.docker.com/_/ubuntu) (24.04) based image is the default base image. It is used for the `latest` and `0.x.y` tag.
 
-There are also images based on `ubuntu:focal` (20.04), `ubuntu:mantic` (23.10) and `ubuntu:noble` (24.04) available.
+There are also images based on `ubuntu:focal` (20.04), `ubuntu:jammy` (22.04), `ubuntu:oracular` (24.10) and `ubuntu:plucky` (25.04) available.
 These images use the tags `focal`, `0.x.y-focal`, ...
 
 ### Debian
 
-Images based on `debian:bullseye`, `debian:bullseye-slim` (11), `debian:bookworm` and `debian:bookworm-slim` (12) are available.
+Images based on [`debian:bullseye`](https://hub.docker.com/_/debian), `debian:bullseye-slim` (11), `debian:bookworm` and `debian:bookworm-slim` (12) are available.
 
 These images have the tags `bullseye`, `0.x.y-bullseye`, ...
 
 ### NVIDIA/CUDA
 
-Images based on `nvidia/cuda` are available using the tags `cuda-<cuda-version>-jammy`, `cuda-<cuda-version>-focal`, `0.x.y-cuda-<cuda-version>-jammy`, ...
+Images based on [`nvidia/cuda`](https://hub.docker.com/r/nvidia/cuda) are available using the tags `cuda-<cuda-version>-jammy`, `cuda-<cuda-version>-focal`, `0.x.y-cuda-<cuda-version>-jammy`, ...

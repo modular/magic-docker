@@ -1,4 +1,4 @@
-FROM ghcr.io/modular/magic:0.4.0 AS build
+FROM ghcr.io/modular/magic:latest AS build
 
 # copy source code, pixi.toml and pixi.lock to the container
 COPY . /app
@@ -14,7 +14,7 @@ RUN magic shell-hook -e prod > /shell-hook.sh
 # extend the shell-hook script to run the command passed to the container
 RUN echo 'exec "$@"' >> /shell-hook.sh
 
-FROM ubuntu:22.04 AS production
+FROM ubuntu:24.04 AS production
 
 # only copy the production environment into prod container
 # please note that the "prefix" (path) needs to stay the same as in the build container
